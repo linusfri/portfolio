@@ -1,0 +1,143 @@
+@import '../../node_modules/normalize.css/normalize';
+@import 'variables';
+@import 'blockquotes';
+@import 'code';
+@import '../../shared/fontawesome/scss/fontawesome.scss';
+$fa-font-path: '../../shared/fontawesome/webfonts';
+@import '../../shared/fontawesome/scss/brands';
+@import '../../shared/fontawesome/scss/solid';
+@import '../../shared/fontawesome/scss/regular';
+
+body {
+    background-color: $background-color;
+}
+
+* {
+    color: $font-color;
+}
+
+* {
+    box-sizing: border-box;
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul {
+    padding-left: 1.5em;
+}
+
+.hidden {
+    display: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+/* Placement */
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 0 auto;
+    padding: 0 1rem;
+}
+
+.header, .footer {
+    flex: 0 0 auto;
+}
+
+/* Header */
+
+.header, .site-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    max-width: 300px;
+}
+
+.site-header {
+    margin-left: 1rem;
+}
+
+/* Title */
+
+.title, .logo {
+    padding: 3em 3em 3em 0;
+}
+
+@media (max-width: 767px) {
+    .title, .logo {
+        padding: 1em 1em 1em 0;
+    }
+    .title {
+        min-width: 50%;
+    }
+    .logo {
+        max-width: 30%;
+    }
+}
+
+.title * {
+    color: #111;
+}
+
+.title p {
+    font-style: italic;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #222;
+    min-height: 100px;
+}
+
+.footer a {
+    color: #222;
+}
+
+.footer .social {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.footer-meta {
+    padding: 1rem;
+}
+
+/* Typografy */
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5rem;
+    color: #444;
+}
+
+p, td, th, li, dd {
+    text-align: justify;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.6em;
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+}
