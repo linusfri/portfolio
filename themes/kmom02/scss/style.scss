@@ -2,7 +2,8 @@
 @import 'variables';
 @import 'blockquotes';
 @import 'code';
-@import '../../shared/fontawesome/scss/fontawesome.scss';
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import '../../shared/fontawesome/scss/fontawesome';
 $fa-font-path: '../../shared/fontawesome/webfonts';
 @import '../../shared/fontawesome/scss/brands';
 @import '../../shared/fontawesome/scss/solid';
@@ -23,7 +24,8 @@ body {
     padding: 0;
 }
 
-ol, ul {
+ol,
+ul {
     padding-left: 1.5em;
 }
 
@@ -31,7 +33,8 @@ ol, ul {
     display: none;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -51,41 +54,51 @@ body {
     padding: 0 1rem;
 }
 
-.header, .footer {
+.header,
+.footer {
     flex: 0 0 auto;
 }
 
 /* Header */
 
-.header, .site-header {
+.header,
+.site-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+
+    @media (max-width: 767px) {
+        justify-content: space-between;
+        background-color: $header-color-mobile;
+    }
+
+    .title,
+    .logo {
+        padding: 1rem;
+    }
+}
+
+.nav {
+    background-color: $nav-background-color;
 }
 
 .logo {
-    max-width: 300px;
+    max-width: 200px;
+    @media (max-width: 767px) {
+        display: none;
+    }
 }
 
-.site-header {
-    margin-left: 1rem;
-}
-
-/* Title */
-
-.title, .logo {
-    padding: 3em 3em 3em 0;
-}
+// .site-header {
+//     margin-left: 1rem;
+// }
 
 @media (max-width: 767px) {
-    .title, .logo {
+    .title,
+    .logo {
         padding: 1em 1em 1em 0;
     }
-    .title {
-        min-width: 50%;
-    }
-    .logo {
-        max-width: 30%;
-    }
+    .title { min-width: 50%; }
+    .logo { max-width: 30%; }
 }
 
 .title * {
@@ -119,21 +132,34 @@ body {
     padding: 1rem;
 }
 
+.icon + .icon {
+    padding-left: 2rem;
+}
+
 /* Typografy */
 
 body {
-    font-family: sans-serif;
+    font-family: 'Source Sans Pro', 'sans-serif';
     line-height: 1.5rem;
     color: #444;
 }
 
-p, td, th, li, dd {
+p,
+td,
+th,
+li,
+dd {
     text-align: justify;
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-bottom: 0.6em;
     font-weight: bold;
 }
