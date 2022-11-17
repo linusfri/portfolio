@@ -345,6 +345,103 @@ pre code {
   line-height: 1.4;
 }
 
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+@media (max-width: 980px) {
+  .main-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.main-grid-title {
+  grid-column: span 3;
+}
+@media (max-width: 980px) {
+  .main-grid-title {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 767px) {
+  .main-grid-title {
+    grid-column: span 1;
+  }
+}
+
+.page-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  min-height: 200px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+}
+.page-card p {
+  padding: 0.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 300px;
+}
+.page-card .page-card-header {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+.page-card .page-card-header h3 {
+  color: rgba(0, 0, 0, 0.9);
+  padding: 0.8rem;
+}
+.page-card h1 {
+  display: none;
+}
+.page-card pre {
+  display: none;
+}
+
+.technology-main-grid {
+  display: grid;
+  grid-template-columns: max(20%, 200px) 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+@media (max-width: 767px) {
+  .technology-main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.technology-main-grid-title {
+  grid-column: span 3;
+}
+
+.flex-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+.flex-sidebar a {
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  margin-top: 0.8rem;
+  border-radius: 3px;
+  transition: background-color 0.5s;
+}
+.flex-sidebar a:hover {
+  background-color: #ee6c4d;
+}
+@media (max-width: 767px) {
+  .flex-sidebar {
+    display: none;
+  }
+}
+
 /*!
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -6464,7 +6561,7 @@ body {
 }
 
 * {
-  color: #000;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 * {
@@ -6559,6 +6656,16 @@ body {
 
 .title p {
   font-style: italic;
+}
+
+/* Main */
+.article {
+  max-width: 600px;
+  justify-self: center;
+}
+.article pre {
+  word-break: break-all;
+  white-space: pre-wrap;
 }
 
 /* Footer */

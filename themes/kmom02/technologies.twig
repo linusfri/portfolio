@@ -1,0 +1,28 @@
+{% include 'incl/header.twig' %}
+
+<body>
+    {% include 'incl/nav.twig' %}
+
+    <section class="container" role="grid">
+        <div class="main-grid">
+            <h1 class="main-grid-title">Teknologier</h1>
+            {% for page in pages("technology") %}
+                <div class="page-card">
+                    <div class="page-card-header">
+                        <h3>{{ page.title }}</h3>
+                    </div>
+                    <div class="page-card-excerpt">
+                        <p>
+                            {{ page.id|content }}
+                        </p>
+                        <a href="{{ page.url }}">Läs mer här</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    
+    {% include 'incl/footer.twig' %}
+</body>
+
+</html>

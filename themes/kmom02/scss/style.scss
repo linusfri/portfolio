@@ -2,6 +2,8 @@
 @import 'variables';
 @import 'blockquotes';
 @import 'code';
+@import 'technologies';
+@import 'technology';
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 @import '../../shared/fontawesome/scss/fontawesome';
 $fa-font-path: '../../shared/fontawesome/webfonts';
@@ -88,10 +90,6 @@ body {
     }
 }
 
-// .site-header {
-//     margin-left: 1rem;
-// }
-
 @media (max-width: 767px) {
     .title,
     .logo {
@@ -107,6 +105,17 @@ body {
 
 .title p {
     font-style: italic;
+}
+
+/* Main */
+.article {
+    max-width: 600px;
+    justify-self: center;
+
+    pre {
+        word-break: break-all;
+        white-space: pre-wrap;
+    }
 }
 
 /* Footer */
