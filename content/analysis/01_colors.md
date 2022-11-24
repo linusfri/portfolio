@@ -114,7 +114,7 @@ Tryck på bilderna för att förstora
         </tr>
     </table>
     <br>
-    <img class="analysis-img" src="%assets_url%/img/Color_scheme_huang.png" alt="">
+    <img class="analysis-img" src="%assets_url%/img/color_scheme_huang.png" alt="">
     <h4>Färgschema</h4>
     <p>
         Andrew Huangs sida är synnerligen färgglad och lekfull. Sidan har en lättsam framtoning och skiljer sig markant från de andra sidorna i detta avseende.
