@@ -10,11 +10,11 @@ $fa-font-path: '../../shared/fontawesome/webfonts';
 @import '../../shared/fontawesome/scss/regular';
 
 body {
-    background-color: $background-color;
+    background-color: $background-color-dark;
 }
 
-*:not(pre) {
-    color: $font-color;
+* {
+    color: $font-color-dark;
 }
 
 * {
@@ -27,6 +27,18 @@ body {
 ol,
 ul {
     padding-left: 1.5em;
+}
+
+img {
+    filter: brightness(0.9);
+}
+
+pre {
+    color: $font-color; 
+}
+
+code {
+    color: $font-color;
 }
 
 .hidden {
@@ -65,10 +77,9 @@ body {
 .site-header {
     display: flex;
     justify-content: flex-start;
-
     @media (max-width: 767px) {
         justify-content: space-between;
-        background-color: $header-color-mobile;
+        background-color: $footer-color-dark;
     }
 
     .title,
@@ -98,7 +109,7 @@ body {
 }
 
 .title * {
-    color: #111;
+    color: $font-color-dark;
 }
 
 .title p {
@@ -120,7 +131,7 @@ body {
     box-shadow: 0 0 10px 1px $box-shadow;
     margin-bottom: 1rem;
     padding: 1rem;
-    
+    background-color: $page-card-dark;
     h4,
     h3,
     h2,
@@ -145,6 +156,7 @@ body {
     left: 50%;
     top: 50%;
     translate: -50% -50%;
+    z-index: 1;
 }
 
 .images {
@@ -160,7 +172,6 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
     }
 }
 
@@ -196,6 +207,7 @@ body {
     max-width: 100%;
     min-height: 200px;
     box-shadow: 0 0 10px 1px $box-shadow;
+    background-color: $page-card-dark;
 
     p {
         padding: 0.4rem;
@@ -211,7 +223,7 @@ body {
     }
 
     .page-card-header h3 {
-        color: $font-color;
+        color: $font-color-dark;
         padding: 0.8rem;
     }
 
@@ -260,7 +272,6 @@ body {
         display: none;
     }
 }
-
 /* Footer */
 
 .footer {
@@ -269,10 +280,11 @@ body {
     align-items: center;
     border-top: 1px solid #222;
     min-height: 100px;
+    background-color: $footer-color-dark;
 }
 
 .footer a {
-    color: #222;
+    color: $font-color-dark;
 }
 
 .footer .social {

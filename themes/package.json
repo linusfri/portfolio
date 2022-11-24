@@ -8,7 +8,10 @@
   },
   "scripts": {
     "lint": "stylelint \"**/*.scss\"",
-    "style": "sass --watch kmom02/scss/style.scss kmom02/css/style.css --no-source-map",
+    "style": "npm run style-light && npm run style-dark",
+    "watch": "sass kmom02/scss/style.scss:kmom02/css/style.css kmom02/scss/style-dark.scss:kmom02/css/style-dark.css kmom02/scss/mobile-menu.scss:kmom02/css/mobile-menu.css kmom02/scss/mobile-menu-dark.scss:kmom02/css/mobile-menu-dark.css --no-source-map --watch",
+    "style-light": "sass kmom02/scss/style.scss kmom02/css/style.css --no-source-map",
+    "style-dark": "sass kmom02/scss/style-dark.scss kmom02/css/style-dark.css --no-source-map",
     "style-min": "sass kmom02/scss/style.scss kmom02/css/style.min.css --no-source-map --style compressed"
   },
   "keywords": [],

@@ -6460,11 +6460,11 @@ readers do not read off random characters that represent icons */
 }
 
 body {
-  background-color: #fff;
+  background-color: rgb(30, 30, 30);
 }
 
-*:not(pre) {
-  color: rgba(0, 0, 0, 0.9);
+* {
+  color: rgb(204, 204, 204);
 }
 
 * {
@@ -6477,6 +6477,18 @@ body {
 ol,
 ul {
   padding-left: 1.5em;
+}
+
+img {
+  filter: brightness(0.9);
+}
+
+pre {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+code {
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .hidden {
@@ -6518,7 +6530,7 @@ body {
   .header,
   .site-header {
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgb(51, 51, 51);
   }
 }
 .header .title,
@@ -6554,7 +6566,7 @@ body {
   }
 }
 .title * {
-  color: #111;
+  color: rgb(204, 204, 204);
 }
 
 .title p {
@@ -6575,6 +6587,7 @@ body {
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
   margin-bottom: 1rem;
   padding: 1rem;
+  background-color: rgb(51, 51, 51);
 }
 .analysis-article h4,
 .analysis-article h3,
@@ -6599,6 +6612,7 @@ body {
   left: 50%;
   top: 50%;
   translate: -50% -50%;
+  z-index: 1;
 }
 
 .images {
@@ -6615,7 +6629,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
   }
 }
 
@@ -6657,6 +6670,7 @@ body {
   max-width: 100%;
   min-height: 200px;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  background-color: rgb(51, 51, 51);
 }
 .page-card p {
   padding: 0.4rem;
@@ -6670,7 +6684,7 @@ body {
   width: 100%;
 }
 .page-card .page-card-header h3 {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgb(204, 204, 204);
   padding: 0.8rem;
 }
 .page-card h1 {
@@ -6723,10 +6737,11 @@ body {
   align-items: center;
   border-top: 1px solid #222;
   min-height: 100px;
+  background-color: rgb(51, 51, 51);
 }
 
 .footer a {
-  color: #222;
+  color: rgb(204, 204, 204);
 }
 
 .footer .social {
