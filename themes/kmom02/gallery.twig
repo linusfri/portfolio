@@ -1,0 +1,24 @@
+{% include 'incl/header.twig' %}
+<body>
+    {% include 'incl/nav.twig' %}
+    <section class="container" role="grid">
+        <div class="main-grid">
+        <h1 class="main-grid-title">{{ meta.title }}</h1>
+            {{ content }}
+        </div>
+    </section>
+    {% if current_page.meta.Iframe %}
+    <div class="iframe-container">
+        <iframe
+        width={{ current_page.meta.Iframe.width }}
+        height={{ current_page.meta.Iframe.height }}
+        src={{ current_page.meta.Iframe.src }}
+        title={{ current_page.meta.Iframe.title }}
+        frameborder="0"
+        allowfullscreen>
+        </iframe>
+    </div>
+    {% endif %}
+
+    {% include 'incl/footer.twig' %}
+</body>
