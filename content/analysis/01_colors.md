@@ -46,7 +46,7 @@ Tryck på bilderna för att förstora
     </div>
 </section>
 
-<section id="grant" class="analysis-article">
+<article id="grant" class="analysis-article">
     <h3>Grant Baldwin</h3>
     <table style="border-spacing: 4px; border-collapse: separate">
         <tr>
@@ -71,7 +71,7 @@ Tryck på bilderna för att förstora
     <p>
         All text på framsidan tillhör familjen sans serif, både titlar och brödtext.
     </p>
-</section>
+</article>
 
 
 <article id="roxane" class="analysis-article">
