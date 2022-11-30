@@ -8,16 +8,19 @@
         </div>
     </section>
     {% if current_page.meta.Iframe %}
-    <div class="iframe-container">
-        <iframe
-        width={{ current_page.meta.Iframe.width }}
-        height={{ current_page.meta.Iframe.height }}
-        src={{ current_page.meta.Iframe.src }}
-        title={{ current_page.meta.Iframe.title }}
-        frameborder="0"
-        allowfullscreen>
-        </iframe>
-    </div>
+    <section class="padding-container">
+        <div class="iframe-container">
+            <iframe
+            class="resp-iframe"
+            width={{ current_page.meta.Iframe.width }}
+            height={{ current_page.meta.Iframe.height }}
+            src={{ current_page.meta.Iframe.src }}
+            title={{ current_page.meta.Iframe.title }}
+            frameborder="0"
+            allowfullscreen>
+            </iframe>
+        </div>
+    </section>
     {% endif %}
 
     {% include 'incl/footer.twig' %}

@@ -113,14 +113,18 @@ body {
     overflow: hidden;
     max-width: 100%;
     grid-column: span 3;
-    margin: auto;
-    .iframe {
+    .resp-iframe {
         position: absolute;
         left: 0;
         top: 0;
         height: 100%;
         width: 100%;
     }
+}
+
+.padding-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .article {
