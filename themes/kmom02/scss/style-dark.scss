@@ -117,6 +117,32 @@ body {
 }
 
 /* Main */
+.iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 80%;
+    grid-column: span 3;
+    margin: auto;
+    .resp-iframe {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    @media (max-width: 767px) {
+        max-width: 100%;
+    }
+}
+
+.padding-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 .article {
     max-width: 600px;
     justify-self: center;

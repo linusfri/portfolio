@@ -6569,12 +6569,36 @@ body {
   overflow: hidden;
   max-width: 100%;
   grid-column: span 3;
+  margin: auto;
 }
 .iframe-container .resp-iframe {
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
+  width: 100%;
+}
+.iframe-container .non-resp-iframe {
+  margin: auto;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .iframe-container {
+    max-width: 100%;
+  }
+}
+
+.non-resp-iframe-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  grid-column: span 3;
+  margin: auto;
+  display: block;
+  margin-top: 2rem;
+}
+.non-resp-iframe-container .non-resp-iframe {
+  margin: auto;
   width: 100%;
 }
 
@@ -6590,6 +6614,19 @@ body {
 .article pre {
   word-break: break-all;
   white-space: pre-wrap;
+}
+
+.analysis-title {
+  font-size: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  margin-top: 0.8rem;
+  border-radius: 3px;
+  padding: 0 1rem;
+  transition: background-color 0.5s;
+}
+
+.analysis-title:hover {
+  background-color: #ee6c4d;
 }
 
 .analysis-article {
@@ -6676,7 +6713,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 100%;
+  width: 100%;
   min-height: 200px;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
 }
@@ -6736,6 +6773,10 @@ body {
   .flex-sidebar {
     display: none;
   }
+}
+
+.hide {
+  display: none;
 }
 
 /* Footer */
